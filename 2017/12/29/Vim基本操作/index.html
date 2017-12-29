@@ -26,7 +26,7 @@
     <!--Title-->
 
 
-<title>Archives: 2017/12 | Chao&#39;s Blog</title>
+<title>Vim基本操作 | Chao&#39;s Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Chao&#39;s Blog" type="application/atom+xml">
@@ -38,6 +38,8 @@
 
 
 
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
@@ -117,51 +119,115 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-    	<h1 class="info">2017年 12月</h1>
-        
-          <li class="post-items" _href="/2017/12/29/Vim基本操作/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/29/Vim基本操作/"> Vim基本操作 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/12/28/git操作汇总/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/28/git操作汇总/"> Git操作汇总 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/12/14/sql/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/14/sql/"> SQL的DML与DDL </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/12/13/Java介绍/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/13/Java介绍/"> Java介绍 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/12/12/HTML介绍/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/12/HTML介绍/"> HTML介绍 </a>
-            </h3>  
-          </li>
-        
-          <li class="post-items" _href="/2017/12/12/hello-world/">
-            <h3 class="post-item-title">
-            	<a href="/2017/12/12/hello-world/"> Hello World </a>
-            </h3>  
-          </li>
-        
-    </ul>
-  </div>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Vim基本操作">
+            
+            Vim基本操作
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>实用</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            vim
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/29</span>
+    </span>
 </div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h4 id="移动光标"><a href="#移动光标" class="headerlink" title="移动光标"></a>移动光标</h4><ul>
+<li>#hjkl</li>
+<li>#2w 向前移动两个单词</li>
+<li>#e 向前移动到第 3 个单词的末尾</li>
+<li>#0 移动到行首</li>
+<li>#$ 当前行的末尾</li>
+<li>#gg 文件第一行</li>
+<li>#G 文件最后一行</li>
+<li>#行号+G 指定行</li>
+<li>#<ctrl>+o 跳转回之前的位置</ctrl></li>
+<li>#<ctrl>+i 返回跳转之前的位置</ctrl></li>
+</ul>
+<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><ul>
+<li>#<esc> 进入正常模式</esc></li>
+<li>#:q! 不保存退出</li>
+<li>#:wq 保存后退出</li>
+</ul>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><ul>
+<li>#x 删除当前字符</li>
+<li>#dw 删除至当前单词末尾</li>
+<li>#de 删除至当前单词末尾，包括当前字符</li>
+<li>#d$ 删除至当前行尾</li>
+<li>#dd 删除整行</li>
+<li>#2dd 删除两行</li>
+</ul>
+<h4 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h4><ul>
+<li>#i 插入文本</li>
+<li>#A 当前行末尾添加</li>
+<li>#r 替换当前字符</li>
+<li>#o 打开新的一行并进入插入模式</li>
+</ul>
+<h4 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h4><ul>
+<li>#u 撤销</li>
+<li>#<ctrl>+r 取消撤销</ctrl></li>
+</ul>
+<h4 id="复制粘贴剪切"><a href="#复制粘贴剪切" class="headerlink" title="复制粘贴剪切"></a>复制粘贴剪切</h4><ul>
+<li>#v 进入可视模式</li>
+<li>#y 复制</li>
+<li>#p 粘贴</li>
+<li>#yy 复制当前行</li>
+<li>#dd 剪切当前行</li>
+</ul>
+<h4 id="vim操作"><a href="#vim操作" class="headerlink" title="vim操作"></a>vim操作</h4><ol>
+<li>跳到文本的最后一行：按“G”,即“shift+g”</li>
+<li>跳到最后一行的最后一个字符 ： 先重复1的操作即按“G”，之后按“$”键，即“shift+4”。</li>
+<li>跳到第一行的第一个字符：先按两次“g”，</li>
+<li>跳转到当前行的第一个字符：在当前行按“0”。</li>
+</ol>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2017/12/28/git操作汇总/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
 
 
 
