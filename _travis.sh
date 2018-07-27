@@ -38,6 +38,18 @@ Job ID   | $TRAVIS_JOB_ID |
 Job NUM  | $TRAVIS_JOB_NUMBER |
 EOF
 
+cat <<EOF >> README.md
+# Person blog
+[![Build Status](https://travis-ci.org/ChaosCoffee/ChaosCoffee.github.io.svg?branch=hexo)](https://travis-ci.org/ChaosCoffee/ChaosCoffee.github.io)  
+https://chaoscoffee.github.io/
+
+Travis CI自动部署Hexo  
+
+[博客地址](https://chaoscoffee.github.io/)  
+
+部署日志见根目录下`build-log.md`
+EOF
+
   git init
   git config user.name "ChaosCoffee"
   git config user.email "1104855822@qq.com"
