@@ -1,5 +1,5 @@
 ---
-title: '''Kubernetes-介绍'''
+title: Kubernetes-介绍
 comments: false
 date: 2018-08-07 11:09:04
 categories: kubernetes
