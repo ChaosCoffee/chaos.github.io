@@ -41,6 +41,7 @@ img:
         - [销毁服务](#销毁服务)
         - [客户端访问](#客户端访问)
         - [查看master](#查看master)
+        - [查看config](#查看config)
     - [问题](#问题)
         - [如何关闭防火墙？](#如何关闭防火墙)
         - [minikube镜像下载不了？](#minikube镜像下载不了)
@@ -259,8 +260,9 @@ app: nginx
 > $ kubectl get pods
 
 查看所有namespace的pod数据
-> $ kubectl get pods --all-namespaces -o wide
-请求部署的service
+> $ kubectl get pods --all-namespaces -o wide  
+
+请求部署的service  
 > $ curl $(minikube service hello-minikube --url)
 
 ### 查看service
@@ -286,6 +288,9 @@ $ minikube logs
 
 ### 查看master
 > $ kubectl cluster-info
+
+### 查看config
+> $ kubectl config view
 
 ---
 ## 问题
