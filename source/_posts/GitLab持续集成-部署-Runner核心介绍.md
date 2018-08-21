@@ -31,7 +31,7 @@ GitLab提供了自动集成、测试，部署的服务，这个动作由GitLab R
 
 ## GitLab-Runner架构图  
 
-![image](https://raw.githubusercontent.com/ChaosCoffee/ChaosCoffee.github.io/master/image/GitLab-Runner.png)  
+![image](https://raw.githubusercontent.com/ChaosCoffee/ChaosCoffee.github.io/master/img/GitLab-Runner.png)  
 
 ## 构成组件
 ### Pipeline
