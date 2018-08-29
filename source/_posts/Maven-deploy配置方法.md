@@ -16,12 +16,14 @@ img:
 
 <!-- /TOC -->
 ## deploy解释
+---
 deploy顾名思义，就是上传的意思。在本地的pom文件配置好之后，执行deploy命令，可以将maven所打的jar包上传到远程的repository，便于其他开发者和工程共享
 
 
 ## setting.xml配置
+---  
 
-```
+``` xml
 <server>
     <id>releases</id>
     <username>admin</username>
@@ -35,8 +37,9 @@ deploy顾名思义，就是上传的意思。在本地的pom文件配置好之�
 ```
 
 ## pom.xml配置  
+--- 
 
-```
+``` xml
 <distributionManagement>  
    <repository>  
      <id>releases</id>  
