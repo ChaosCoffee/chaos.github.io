@@ -49,19 +49,23 @@ public @interface Profile {
 
 }
 ```
+
 ### @Profile应用
 1. 首先定义接口DatabaseOperationService
 
-``` java
+``` java  
 public interface DatabaseOperationService {
 
     List listByPage();
 
 }
-``` 
----
-2. 需要作为不同的数据库方式则实现此接口(具体实现代码忽略)
+```
 
+---
+
+2. 需要作为不同的数据库方式则实现此接口(具体实现代码忽略)  
+   
+JDBC实现类:
 ``` java
 public class JDBCServiceImpl implements DatabaseOperationService {
 
@@ -74,8 +78,8 @@ public class JDBCServiceImpl implements DatabaseOperationService {
     }
 }
 ```
-
-
+  
+Mongo实现类:
 ``` java
 public class MongoServiceImpl implements DatabaseOperationService {
 
@@ -91,10 +95,11 @@ public class MongoServiceImpl implements DatabaseOperationService {
     }
 }
 ```
+
 ---
 
 3. 根据配置来实例需要的数据库加载方式
-
+配置类
 ``` java
 @Configuration
 public class DataBaseConfiguration {
@@ -187,6 +192,7 @@ public class DataBaseConfiguration {
 }
 ```
 
+---
 4. 配置文件  
 `resource`目录下存在 `applicaiton-db.yml`或者 `applicaiton-mongo.yml`就能找到对应属性配置，同时在`application.yml`父级配置文件指定有效配置环境。
 
@@ -261,6 +267,7 @@ public @interface ConditionalOnProperty {
 
 }
 ```
+---
 
 ### @ConditionalOnProperty应用
 1. 添加注解@ConditionalOnProperty  
@@ -319,10 +326,9 @@ public enum DatabaseEnum {
         return UNACCEPT;
     }
 }
-
 ```
 
----
+---  
 
 2. 增加接口方法  
 这里其实是为了下面工厂类更好的找到Bean,或者不用接口增加方法，给实例Bean设置别名和配置文件保持一致即可。
